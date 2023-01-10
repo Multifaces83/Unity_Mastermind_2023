@@ -8,6 +8,7 @@ public class Ball :MonoBehaviour, IClicObject
     [SerializeField] private Color[] _colors;
     private MeshRenderer _renderer;
     private int _actualColor = -1;
+    private AppManager _manager;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,9 @@ public class Ball :MonoBehaviour, IClicObject
         }
         _renderer.material.color = _colors[_actualColor];
         Debug.Log("cliclicclic");
+        Debug.Log(_colors);
     }
-
+    public void ActivatePawn() { }
+    public void DeactivatePawn() { }
     
 }
